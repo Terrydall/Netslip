@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Bienvenue sur <%= title %></p>
+
+    <form action="/search" method="GET">
+      <input type="text" name="search" placeholder="recherche de films">
+      <button type="submit">Recherche</button>
+    </form>
+  </body>
+</html>
