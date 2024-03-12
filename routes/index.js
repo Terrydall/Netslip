@@ -3,6 +3,7 @@ const router = express.Router();
 const modelsOmdb = require('../models/omdb');
 
 
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('home', { title: 'Netslip' });
@@ -19,7 +20,6 @@ function routFilms(req, res, next) {
     beforePage: Number(req.page) - 1
   });
 }
-
 
 router.get('/films/:find', modelsOmdb.getFind, routFilms)
 router.get('/films/:find/:page', modelsOmdb.getFind, routFilms);
